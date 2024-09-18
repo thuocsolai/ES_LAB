@@ -102,13 +102,13 @@ int main(void)
   int counter = 9;
   HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
   HAL_GPIO_WritePin(Output_Y0_GPIO_Port, Output_Y0_Pin, 0);
-  HAL_GPIO_WritePin(Output_Y1_GPIO_Port, Output_Y1_Pin, 1);
+  HAL_GPIO_WritePin(Output_Y1_GPIO_Port, Output_Y1_Pin, 0);
 
   while (1){
 	  if (counter == 4){
 		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
 		  HAL_GPIO_WritePin(Output_Y0_GPIO_Port, Output_Y0_Pin, 1);
-		  HAL_GPIO_WritePin(Output_Y1_GPIO_Port, Output_Y1_Pin, 1);
+		  HAL_GPIO_WritePin(Output_Y1_GPIO_Port, Output_Y1_Pin, 0);
 	  } else if (counter == 1){
 		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
 		  HAL_GPIO_WritePin(Output_Y0_GPIO_Port, Output_Y0_Pin, 0);
@@ -116,7 +116,7 @@ int main(void)
 	  } else if (counter <= 0){
 		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
 		  HAL_GPIO_WritePin(Output_Y0_GPIO_Port, Output_Y0_Pin, 0);
-		  HAL_GPIO_WritePin(Output_Y1_GPIO_Port, Output_Y1_Pin, 1);
+		  HAL_GPIO_WritePin(Output_Y1_GPIO_Port, Output_Y1_Pin, 0);
 		  counter = 9;
 	  }
 
